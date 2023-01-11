@@ -32,13 +32,14 @@ class MainActivity : AppCompatActivity() {
             // TODO check API connection
             val layoutRegister = findViewById(R.id.layoutRegister) as View
             layoutRegister.visibility = View.INVISIBLE
+
             val prompt = findViewById(R.id.prompt) as View
             prompt.visibility = View.VISIBLE
+            supportFragmentManager.beginTransaction().apply {
+                replace(R.id.assistant_container, assistantFragment)
+                commit()
+            }
         }
-        /*supportFragmentManager.beginTransaction().apply {
-            replace(R.id.assistant_container, assistantFragment)
-            commit()
-        }*/
     }
 
     override fun onBackPressed() {

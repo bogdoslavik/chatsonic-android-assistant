@@ -21,8 +21,8 @@ class AimyboxApplication : Application(), AimyboxProvider {
     private fun createAimybox(context: Context): Aimybox {
         val unitId = UUID.randomUUID().toString()
 
-        val textToSpeech = GooglePlatformTextToSpeech(context, Locale.ENGLISH)
-        val speechToText = GooglePlatformSpeechToText(context, Locale.ENGLISH)
+        val textToSpeech = GooglePlatformTextToSpeech(context, getResources().getConfiguration().locale)
+        val speechToText = GooglePlatformSpeechToText(context, getResources().getConfiguration().locale)
 
         val dialogApi = AimyboxDialogApi(AIMYBOX_API_KEY, unitId)
 
