@@ -1,9 +1,15 @@
 package com.justai.aimybox.assistant
 
+import android.content.Intent
+import android.content.Intent.ACTION_VIEW
+import android.net.Uri
 import android.os.Bundle
+import android.view.View
 import android.view.WindowManager
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.justai.aimybox.components.AimyboxAssistantFragment
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,10 +21,24 @@ class MainActivity : AppCompatActivity() {
 
         val assistantFragment = AimyboxAssistantFragment()
 
-        supportFragmentManager.beginTransaction().apply {
+        val buttonRegister = findViewById(R.id.buttonRegister) as Button
+        buttonRegister.setOnClickListener {
+            val browser = Intent(ACTION_VIEW, Uri.parse("https://writesonic.com?via=chatsonicapp"))
+            startActivity(browser)
+        }
+
+        val buttonConnect = findViewById(R.id.buttonConnect) as Button
+        buttonConnect.setOnClickListener {
+            // TODO check API connection
+            val layoutRegister = findViewById(R.id.layoutRegister) as View
+            layoutRegister.visibility = View.INVISIBLE
+            val prompt = findViewById(R.id.prompt) as View
+            prompt.visibility = View.VISIBLE
+        }
+        /*supportFragmentManager.beginTransaction().apply {
             replace(R.id.assistant_container, assistantFragment)
             commit()
-        }
+        }*/
     }
 
     override fun onBackPressed() {

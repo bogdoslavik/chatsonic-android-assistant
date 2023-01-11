@@ -1,7 +1,11 @@
 <resources>
-    <string name="app_name">Chatsonic</string>
-    <string name="prompt">Chatsonic is ready to help\n\nTap on button below</string>
+    <string name="app_name">Writesonic</string>
+    <string name="prompt">Writesonic is ready to help\n\nTap on button below</string>
     <string name="initial_phrase">How can I help?</string>
     <string name="register_to_get_a_key">Register for Free</string>
     <string name="your_api_key">Your API Key</string>
+    <string name="label_key">Enter API Key:</string>
+    <string name="register_for_free">Register for Free</string>
+    <string name="connect">CONNECT</string>
+    <string name="key_REMOVE_ME">e32c1e28-aa3e-4a3b-b057-f17e47be74c6</string>
 </resources>
