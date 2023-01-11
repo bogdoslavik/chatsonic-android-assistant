@@ -2,6 +2,7 @@ package com.justai.aimybox.assistant
 
 import android.app.Application
 import android.content.Context
+import android.content.res.Resources
 import com.justai.aimybox.Aimybox
 import com.justai.aimybox.api.aimybox.AimyboxDialogApi
 import com.justai.aimybox.components.AimyboxProvider
@@ -21,12 +22,15 @@ class AimyboxApplication : Application(), AimyboxProvider {
     private fun createAimybox(context: Context): Aimybox {
         val unitId = UUID.randomUUID().toString()
 
-        val textToSpeech = GooglePlatformTextToSpeech(context, getResources().getConfiguration().locale)
-        val speechToText = GooglePlatformSpeechToText(context, getResources().getConfiguration().locale)
+        @Suppress("DEPRECATION") // TODO
+        val locale = getResources().getConfiguration().locale
+        val textToSpeech = GooglePlatformTextToSpeech(context, locale)
+        val speechToText = GooglePlatformSpeechToText(context, locale)
 
         val dialogApi = AimyboxDialogApi(AIMYBOX_API_KEY, unitId)
 
         val aimyboxConfig = Config.create(speechToText, textToSpeech, dialogApi)
+        @Suppress("DEPRECATION") // TODO
         return Aimybox(aimyboxConfig)
     }
 }
