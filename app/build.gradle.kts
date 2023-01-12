@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.justai.aimybox.assistant"
 
-        minSdk = 21
+        minSdk = 22
         targetSdk = 31
 
         versionName = aimyboxVersion
@@ -41,7 +41,7 @@ android {
 
 dependencies {
 
-    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.0-beta-3")
+    debugImplementation("com.squareup.leakcanary:leakcanary-android:2.10")
 
     implementation("androidx.appcompat:appcompat:1.4.1")
     implementation("androidx.recyclerview:recyclerview:1.2.1")

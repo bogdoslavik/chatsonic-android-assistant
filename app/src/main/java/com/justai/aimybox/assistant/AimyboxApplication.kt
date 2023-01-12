@@ -23,7 +23,7 @@ class AimyboxApplication : Application(), AimyboxProvider {
         val unitId = UUID.randomUUID().toString()
 
         @Suppress("DEPRECATION") // TODO
-        val locale = getResources().getConfiguration().locale
+        val locale = resources.configuration.locale
         val textToSpeech = GooglePlatformTextToSpeech(context, locale)
         val speechToText = GooglePlatformSpeechToText(context, locale)
 
