@@ -1,10 +1,11 @@
 # TODO
 - extend dialog api
-- change package from com.justai.aimybox.assistant
+- 
 - add locale to API url
 - check api 
-- show error when not connecte
-
+- show error when not connected
+  change package from com.justai.aimybox.assistant
+-
 # NEXT
 - design 
 - show progress while checking
