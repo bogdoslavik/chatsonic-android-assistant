@@ -1,10 +1,9 @@
 # TODO
-
-- check api 
-- show error when not connected
-
-- dialog api
+- extend dialog api
 - change package from com.justai.aimybox.assistant
+- add locale to API url
+- check api 
+- show error when not connecte
 
 # NEXT
 - design 
@@ -14,4 +13,4 @@
 - change icon
 - enable memory api
 
-e32c1e28-aa3e-4a3b-b057-f17e47be74c6
+e32c1e28-aa3e-4a3b-b057-f17e47be74c6 - remove api key from website and add new

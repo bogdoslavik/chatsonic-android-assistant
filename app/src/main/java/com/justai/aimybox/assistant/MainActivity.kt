@@ -84,21 +84,5 @@ class MainActivity : AppCompatActivity() {
         if (assistantFragment?.onBackPressed() != true) super.onBackPressed()
     }
 
-    fun apiCall(text: String): Response {
-        val client = OkHttpClient()
-
-        val mediaType = "application/json".toMediaTypeOrNull()
-        val body = RequestBody.create(mediaType, "{\"enable_google_results\":\"true\",\"enable_memory\":false}")
-        val request = Request.Builder()
-            .url("https://api.writesonic.com/v2/business/content/chatsonic?engine=premium")
-            .post(body)
-            .addHeader("accept", "application/json")
-            .addHeader("content-type", "application/json")
-            .addHeader("X-API-KEY", "e32c1e28-aa3e-4a3b-b057-f17e47be74c6")
-            .build()
-
-        val response = client.newCall(request).execute()
-        return response
-    }
 
 }
