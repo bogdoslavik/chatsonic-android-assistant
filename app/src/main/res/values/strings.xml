@@ -3,9 +3,9 @@
     <string name="prompt">Writesonic is ready to write a text or answer a question\n\nGenerated text will be copied to the clipboard\n\nTap on button below</string>
     <string name="initial_phrase">How can I help?</string>
     <string name="register_to_get_a_key">Register for Free</string>
-    <string name="your_api_key">Your API Key</string>
+    <string name="your_api_key">Get your API key from website</string>
     <string name="label_key">Enter API Key:</string>
-    <string name="register_for_free">Register for Free</string>
-    <string name="connect">CONNECT</string>
-    <string name="key_REMOVE_ME">e32c1e28-aa3e-4a3b-b057-f17e47be74c6</string>
+    <string name="register_for_free">Tap to Register for Free</string>
+    <string name="connect">Connect</string>
+    <string name="settings">Settings</string>
 </resources>

@@ -3,6 +3,7 @@
     package="com.justai.aimybox.assistant">
 
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".AimyboxApplication"
